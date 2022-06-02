@@ -38,7 +38,6 @@ import com.lt.bean.Login;
 @EnableAutoConfiguration
 @Configuration
 @Import({ AdminConfig.class, StudentConfig.class, ProfessorConfig.class, UserConfig.class, LoginConfig.class })
-
 public class LtCrsG5SpringCoreApplication {
 	
 	/**
