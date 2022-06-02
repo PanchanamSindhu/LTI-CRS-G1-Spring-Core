@@ -16,7 +16,7 @@ import com.lt.service.impl.ProfessorServiceImpl;
 @Configuration
 public class ProfessorConfig {
 	@Bean(name = "professorBean")
-	public ProfessorService adminService() {
+	public ProfessorService professor() {
 		return new ProfessorServiceImpl();
 	}
 

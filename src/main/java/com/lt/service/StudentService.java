@@ -21,5 +21,7 @@ public interface StudentService {
 	public void course();
 	
 	public void viewStudents();
+	
+	public void studentMenu();
 
 }

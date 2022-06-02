@@ -16,7 +16,7 @@ import com.lt.service.impl.AdminServiceImpl;
 @Configuration
 public class AdminConfig {
 	@Bean(name = "adminBean")
-	public AdminService adminService() {
+	public AdminService admin() {
 		return new AdminServiceImpl();
 	}
 

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import org.springframework.stereotype.Service;
 
-import com.lt.application.CRSApplication;
+import com.lt.application.LtCrsG5SpringCoreApplication;
 import com.lt.service.ProfessorService;
 
 /**
@@ -78,7 +78,7 @@ public class ProfessorServiceImpl implements ProfessorService {
 			//professorMenu();
 			//break;
 		case 4:
-			CRSApplication.optionSelect();
+			//LtCrsG5SpringCoreApplication.optionSelect();
 
 		}	
 		

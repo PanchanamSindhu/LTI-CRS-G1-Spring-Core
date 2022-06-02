@@ -23,5 +23,7 @@ public interface AdminService {
 	public List<Course> addCourse();
 	
 	public void removeCourse(List<Course> l);
+	
+	public void loginList();
 
 }

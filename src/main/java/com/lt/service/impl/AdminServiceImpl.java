@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import org.springframework.stereotype.Service;
 
-import com.lt.application.CRSApplication;
+
 import com.lt.bean.Admin;
 import com.lt.bean.Course;
 import com.lt.dao.AdminDao;
@@ -80,6 +80,8 @@ public class AdminServiceImpl implements AdminService {
 	 * @param unused
 	 * @return nothing.
 	 */
+	
+	@Override
 	public void loginList() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(" 1 - Add Professor ");
@@ -102,9 +104,10 @@ public class AdminServiceImpl implements AdminService {
 		} else if (a == 5) {
 
 			removeCourse(course);
-		}else if (a == 6) {
+		}
+		else if (a == 6) {
 
-			CRSApplication.optionSelect();
+			//CRSApplication.optionSelect();
 		}
 
 	}

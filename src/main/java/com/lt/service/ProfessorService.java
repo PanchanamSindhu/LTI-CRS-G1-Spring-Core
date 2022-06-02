@@ -7,4 +7,6 @@ public interface ProfessorService {
 	public void viewRegisteredStudents();
 
 	public void selectCourses();
+	
+	public void professorMenu();
 }

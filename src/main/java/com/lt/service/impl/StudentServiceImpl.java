@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 import org.springframework.stereotype.Service;
 
-import com.lt.application.CRSApplication;
 import com.lt.dao.StudentDao;
 import com.lt.service.StudentService;
 
@@ -73,7 +72,7 @@ public class StudentServiceImpl implements StudentService {
 		a = ssd.course();
 
 	}
-
+	@Override
 	public void studentMenu() {
 
 		LocalDateTime localDateTime = LocalDateTime.now();
@@ -118,7 +117,7 @@ public class StudentServiceImpl implements StudentService {
 			studentMenu();
 			break;
 		case 6:
-			CRSApplication.optionSelect();
+			//CRSApplication.optionSelect();
 			break;
 
 		}

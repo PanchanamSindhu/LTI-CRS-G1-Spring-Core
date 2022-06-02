@@ -16,7 +16,7 @@ import com.lt.service.impl.StudentServiceImpl;
 @Configuration
 public class StudentConfig {
 	@Bean(name = "studentBean")
-	public StudentService adminService() {
+	public StudentService student() {
 		return new StudentServiceImpl();
 	}
 
