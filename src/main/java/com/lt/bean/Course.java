@@ -31,6 +31,12 @@ public class Course {
 		this.isOffered = isOffered;
 	}
 
+	@Override
+	public String toString() {
+		return "Course [courseCode=" + courseCode + ", courseName=" + courseName + ", isOffered=" + isOffered
+				+ ", instructor=" + instructor + "]";
+	}
+
 	public String getInstructor() {
 		return instructor;
 	}

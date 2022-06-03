@@ -20,9 +20,9 @@ public interface AdminService {
 
 	public void generateReportCard();
 
-	public List<Course> addCourse();
+	public void addCourse();
 	
-	public void removeCourse(List<Course> l);
+	public void removeCourse();
 	
 	public void loginList();
 

@@ -26,7 +26,7 @@ import com.lt.service.StudentService;
 import com.lt.bean.Login;
 
 /**
- * The CRS program implements an application that simply allows the user to
+ * The CRS program implements an Spring core application that simply allows the user to
  * perform Specific actions by taking Input from console.
  *
  * @author group5
@@ -49,13 +49,13 @@ public class LtCrsG5SpringCoreApplication {
 	 */
 
 	public static void main(String[] args) {
-		// SpringApplication.run(LtCrsG5SpringCoreApplication.class, args);
-
+	
 		ApplicationContext adminContext = SpringApplication.run(AdminConfig.class);
 		AdminService adminObj = (AdminService) adminContext.getBean("adminBean");
 
 		ApplicationContext studentContext = SpringApplication.run(StudentConfig.class);
 		StudentService studentObj = (StudentService) studentContext.getBean("studentBean");
+		
 
 		ApplicationContext professorContext = SpringApplication.run(ProfessorConfig.class);
 		ProfessorService professorObj = (ProfessorService) professorContext.getBean("professorBean");

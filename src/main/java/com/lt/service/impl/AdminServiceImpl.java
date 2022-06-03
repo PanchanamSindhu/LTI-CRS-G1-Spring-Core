@@ -25,6 +25,7 @@ import com.lt.service.AdminService;
 public class AdminServiceImpl implements AdminService {
 
 	Admin admin = new Admin();
+	List<Course> course=new ArrayList<Course>();
 
 	/**
 	 * This method allows user to add  professor. 
@@ -69,10 +70,15 @@ public class AdminServiceImpl implements AdminService {
 	 * @return List.
 	 */
 	@Override
-	public List<Course> addCourse() {
+	public void addCourse() {
 		// TODO Auto-generated method stub
+		
 		AdminDao adminDao = new AdminDao();
-		return adminDao.addCourse();
+		course.addAll(adminDao.addCourse());
+		System.out.println(" COURSES ADDED :");
+		course.stream().forEach(System.out::println);
+		//System.out.println("courses :"+course);
+		loginList();
 
 	}
 	/**
@@ -100,10 +106,10 @@ public class AdminServiceImpl implements AdminService {
 		} else if (a == 3) {
 			generateReportCard();
 		} else if (a == 4) {
-			 course = addCourse();
+			addCourse();
 		} else if (a == 5) {
 
-			removeCourse(course);
+			removeCourse();
 		}
 		else if (a == 6) {
 
@@ -118,9 +124,8 @@ public class AdminServiceImpl implements AdminService {
 	 * @return List.
 	 */
 	@Override
-	public void removeCourse(List<Course> course) {
+	public void removeCourse() {
 		AdminDao adminDao = new AdminDao();
-		System.out.println("inside remove");
 		adminDao.removeCourse(course);
 
 	}

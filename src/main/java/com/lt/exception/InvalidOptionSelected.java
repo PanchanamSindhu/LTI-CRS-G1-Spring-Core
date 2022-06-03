@@ -6,16 +6,17 @@ package com.lt.exception;
  * @param args Unused.
  * @return Nothing.
  * 
- */
-public class CourseNotFoundException extends RuntimeException {
+ *  */
+public class InvalidOptionSelected {
 	/**
 	 * 
 	 * This method return exception message .
-	 * return CourseNotFoundException
+	 * return InvalidOptionSelected
 	 */
 
-	public CourseNotFoundException(String errorMessage) {  
-	    super(errorMessage); 
+	public InvalidOptionSelected(String errorMessage) {  
+	    super(); 
 
 }
+
 }

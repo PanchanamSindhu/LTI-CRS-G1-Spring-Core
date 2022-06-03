@@ -38,7 +38,7 @@ public class AdminDao implements AdminDaoInterface {
 			pro.setDesignation(desi);
 			prof.add(pro);
 		}
-		System.out.println(" enter 1 to display ProfessorList and 2 to redirect to main menu");
+		System.out.println(" Enter 1 to display ProfessorList and 2 to redirect to main menu");
 		int b = sc.nextInt();
 		if (b == 1) {
 			for (Professor po : prof) {
@@ -99,7 +99,7 @@ public class AdminDao implements AdminDaoInterface {
 			courseList.add(course);
 
 		}
-		System.out.println(" enter 1 to display CourseList and 2 to redirect to main menu");
+		System.out.println(" Enter 1 to display CourseList :");
 		int b = sc.nextInt();
 		if (b == 1) {
 			for (Course co : courseList) {
@@ -108,13 +108,14 @@ public class AdminDao implements AdminDaoInterface {
 				System.out.println();
 			}
 			System.out.println(" Redirecting to main menu...");
-			adminServiceImpl.loginList();
-		} else if (b == 2) {
-			adminServiceImpl.loginList();
+			//adminServiceImpl.loginList();
+//		} else if (b == 2) {
+//			adminServiceImpl.loginList();
+//		}
+		//System.out.println("inside add course" + courseList);
+		
 		}
-		System.out.println("inside add course" + courseList);
 		return courseList;
-
 	}
 
 	/**
@@ -135,10 +136,11 @@ public class AdminDao implements AdminDaoInterface {
 
 			cList.add(item);
 		});
-		System.out.println(cList);
 		couserList.removeAll(cList);
 
-		System.out.println(" Course Removed Successfully!!" + couserList);
+		System.out.println(" Course Removed Successfully!!  " );
+		couserList.stream().forEach(System.out::println);
+		
 		System.out.println(" Redirecting to main menu...");
 		adminServiceImpl.loginList();
 	}
