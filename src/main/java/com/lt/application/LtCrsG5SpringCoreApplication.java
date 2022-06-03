@@ -19,6 +19,8 @@ import com.lt.configuration.LoginConfig;
 import com.lt.configuration.ProfessorConfig;
 import com.lt.configuration.StudentConfig;
 import com.lt.configuration.UserConfig;
+import com.lt.exception.CourseNotFoundException;
+import com.lt.exception.LoginFailedException;
 import com.lt.service.AdminService;
 import com.lt.service.LoginService;
 import com.lt.service.ProfessorService;
@@ -107,7 +109,7 @@ public class LtCrsG5SpringCoreApplication {
 	 * @param unused
 	 * @return nothing.
 	 */
-	public static void login(AdminService adminObj, StudentService studentObj, ProfessorService professorObj,LoginService loginObj) {
+	public static void login(AdminService adminObj, StudentService studentObj, ProfessorService professorObj,LoginService loginObj){
 		
 		System.out.println("--Login Page---\n");
 		Scanner sc = new Scanner(System.in);
@@ -127,6 +129,13 @@ public class LtCrsG5SpringCoreApplication {
 					professorObj.professorMenu();
 				}
 
+			}else {
+				try {
+					throw new LoginFailedException("InValid UserName and Password. Please Enter valid UserName and Password.\n");
+				} catch (LoginFailedException e) {
+					System.out.println(e);
+				}
+				optionSelect(adminObj, studentObj, professorObj, loginObj);
 			}
 		}
 

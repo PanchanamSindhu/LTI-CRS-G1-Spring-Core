@@ -7,7 +7,7 @@ package com.lt.exception;
  * @return Nothing.
  * 
  *  */
-public class InvalidOptionSelected {
+public class InvalidOptionSelected extends RuntimeException{
 	/**
 	 * 
 	 * This method return exception message .
